@@ -17,14 +17,14 @@
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script>
         let tg = window.Telegram.Webapp;
-        let buy document.getElementById("buy")
+        let buy document.getElementById("buy");
 
         buy.addEventListener("click", () => {
-            document.getElemById("name").style.display = "none"
-            document.getElemById("user_name").value = tg.initDataUnsafe.fullname
-            tg.close()
+            document.getElemById("name").style.display = "none";
+            document.getElemById("user_name").value = tg.initDataUnsafe.fullname;
+            tg.close();
 
-        })
+        });
 
 
 
