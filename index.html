@@ -20,15 +20,16 @@
         let buy = document.getElementById("buy");
 
         buy.addEventListener("click", () => {
+            tg.close();
             let name = document.getElementById("Name").value;
             let age = document.getElementById("Age").value;
             document.getElementById("user_name").value = tg.initDataUnsafe.fullname;
             let data = {
                 name: name,
                 age: age};
-        tg.sendData(JSON.stringefy(data));
-        tg.close();
-            
+            tg.sendData(JSON.stringify(data));
+            tg.close();
+
             });
 
     </script>
