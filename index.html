@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <form>
+    <form id="form">
         <input type="text" placeholder="Name" id="name"><br>
         <input type="text" placeholder="Age" id="Age"><br>
         <button class="btn btn-warning" id="buy">Send</button>
@@ -20,13 +20,13 @@
         let buy = document.getElementById("buy");
 
         buy.addEventListener("click", () => {
-            let name = document.getElemById("Name").value;
-            let age = document.getElemById("Age").value;
-            document.getElemById("user_name").value = tg.initDataUnsafe.fullname;
+            let name = document.getElementById("Name").value;
+            let age = document.getElementById("Age").value;
+            document.getElementById("user_name").value = tg.initDataUnsafe.fullname;
             let data = {
                 name: name,
-                age: age}
-            tg.sendData(JSON.stringefy(data))'
+                age: age};
+            tg.sendData(JSON.stringefy(data));
             tg.close();
             });
 
